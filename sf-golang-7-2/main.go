@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"sf-golang-7-2/fmtnum"
+	"sf-golang-7-2/fmtdec"
 	"sf-golang-7-2/square-eq"
 )
 
@@ -13,12 +13,12 @@ func main() {
 		c float64 = 1
 	)
 
-	fmt.Printf("Уравнение %sx²+%sx+%s=0", fmtnum.F64(a), fmtnum.F64(b), fmtnum.F64(c))
+	fmt.Printf("Уравнение %sx²+%sx+%s=0", fmtdec.F(a), fmtdec.F(b), fmtdec.F(c))
 	x1, x2, err := squareEq.SolveReal(a, b, c)
 
 	switch err {
 	case nil:
-		fmt.Printf(" имеет решения: x₁=%s, x₂=%s\n", fmtnum.F64(x1), fmtnum.F64(x2))
+		fmt.Printf(" имеет решения: x₁=%s, x₂=%s\n", fmtdec.F(x1), fmtdec.F(x2))
 	case squareEq.ErrNoRealRoots:
 		fmt.Println(" не имеет вещественных решений")
 	case squareEq.ErrZeroA:
@@ -31,12 +31,12 @@ func main() {
 		ci = -1 - 9i
 	)
 
-	fmt.Printf("Уравнение %sx²+%sx+%s=0", fmtnum.C128(ai), fmtnum.C128(bi), fmtnum.C128(ci))
+	fmt.Printf("Уравнение %sx²+%sx+%s=0", fmtdec.F(ai), fmtdec.F(bi), fmtdec.F(ci))
 	xi1, xi2, err := squareEq.SolveComplex(ai, bi, ci)
 
 	switch err {
 	case nil:
-		fmt.Printf(" имеет решения: x₁=%s, x₂=%s\n", fmtnum.C128(xi1), fmtnum.C128(xi2))
+		fmt.Printf(" имеет решения: x₁=%s, x₂=%s\n", fmtdec.F(xi1), fmtdec.F(xi2))
 	case squareEq.ErrZeroA:
 		fmt.Println(" не является квадратным")
 	}
