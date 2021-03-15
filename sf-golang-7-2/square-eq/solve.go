@@ -55,7 +55,7 @@ func SolveComplex(a, b, c complex128) (x1, x2 complex128, err error) {
 		return
 	}
 
-	DSqrt := cmplx.Sqrt(b*b - 4*a*c)
+	DSqrt := cmplx.Sqrt((b * b) - (4 * a * c))
 	x1 = (-b - DSqrt) / (2 * a)
 	x2 = (-b + DSqrt) / (2 * a)
 
