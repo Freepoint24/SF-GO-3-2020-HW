@@ -8,8 +8,8 @@ import (
 func main() {
 	var (
 		a float64 = 2
-		b float64 = 4
-		c float64 = 2
+		b float64 = 3
+		c float64 = 1
 	)
 
 	fmt.Printf("\nУравнение %fx² + %fx + %f = 0\n", a, b, c)
