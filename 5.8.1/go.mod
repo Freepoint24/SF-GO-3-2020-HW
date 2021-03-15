@@ -1,3 +1,0 @@
-module golang-5-8-1
-
-go 1.16

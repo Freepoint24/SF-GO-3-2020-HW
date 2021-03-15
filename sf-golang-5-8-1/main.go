@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"golang-5-8-1/math"
+	"sf-golang-5-8-1/math"
 )
 
 func main() {
